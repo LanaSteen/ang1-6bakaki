@@ -1,9 +1,18 @@
 <p>restaurant works!</p>
 
 
+<!-- two way binding  [()] -->
+
+<input type="" [(ngModel)]="rame" (ngModelChange)="filter()" >
+<h1>{{rame}}</h1>
+
+
+@let randerProduct = filterproduct.length > 0 ? filterproduct : products;
+
+
 <main class="d-flex" style="flex-wrap: wrap;">
 
- @for (item of products; track $index) {
+ @for (item of randerProduct; track $index) {
   <div class="card" style="width: 18rem;" (click)="getId(item)">
   <img [src]="item.image" class="card-img-top" alt="...">
   <div class="card-body">

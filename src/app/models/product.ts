@@ -1,15 +1,23 @@
 
 
 
-class Product {
+export class Product {
    id! : number;
-   name? : string;
+   name! : string;
    price? : number;
    nuts? : boolean;
    image? : string;
    vegeterian? : boolean;
-   spiciness? : number;
+   spiciness? : spicinessEnum;
    categoryId? : number;
+}
+
+enum  spicinessEnum {
+   nospice = 0,
+   middle = 1,
+   hulfspice = 2,
+   hot = 3,
+   veryhot = 4
 }
 
 
