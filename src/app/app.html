@@ -4,68 +4,10 @@
 
 
 
+<!-- <app-home></app-home> -->
 
-@if(show){
-    <nav>
-       <h2>navigation</h2>
-    </nav>
-}
-
-<!-- one way binding  {{}}  - სტრინგის ინტერპოლაცცია ${} -->
-<!-- ფროფერთი ბაინდინგი [] -->
-
-<!-- ივენთ ბაინდინგი () -->
-
-<img (click)="showhidefunc()" width="200" src="123.jpg" alt="">
+<app-restaurant></app-restaurant>
 
 
-<h2 [className]="showHide">{{num}}</h2>
-<button (click)="increase()">click</button>
-
-
-<!-- *ngIf   -->
- <!-- *ngFor  -->
-
-
-<!-- @if(5>3){
-   <p>this is true</p>
-} -->
-
-
-@for (item of numbers; track $index) {
-   <p>{{item}}</p>
-}
-
-<ul>
-  @for (item of numbers; track $index) {
-        <li>{{item}}</li>
-  }
-</ul>
-
-
-
-<div class="container">
-      @for (item of categories; track $index) {
-           <button (click)="printid(item.id)">{{item.name}}</button>
-      }
-</div>
-
-
-
-<!-- @if @for სტრუქტურული დეკორატორები  -->
-
-
-
-
-@for (el of products; track $index) {
-   <div class="card" style="width: 18rem;">
-  <img [src]="el.image" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{el.title}}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-}
 
 <app-footer></app-footer>
