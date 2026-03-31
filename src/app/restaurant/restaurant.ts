@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from '../models/product';
+import {  Category, Product } from '../models/product';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,6 +10,16 @@ import { FormsModule } from '@angular/forms';
 })
 export class Restaurant {
   rame: string ="";
+ asc = "Asc"
+
+sort(){
+  this.asc == "Asc" ? this.asc = "Desc" : this.asc = "Asc"
+  if( this.asc == "Desc"){
+       this.filterproduct = this.products.sort((a,b) => a.price- b.price)
+  }else{
+     this.filterproduct = this.products.sort((a,b) =>  b.price- a.price)
+  }
+}
 
 
 
@@ -23,6 +33,14 @@ filter(){
     console.log(obj.image);
   }
   
+ showAll(){
+  this.filterproduct = this.products
+ }
+ 
+  filterByCat(id: number){
+   this.filterproduct = this.products.filter(el => el.categoryId == id)
+  }
+
   filterproduct : Product[] = [];
 
   products: Product[] = [
@@ -297,4 +315,44 @@ filter(){
       categoryId: 8,
     },
   ];
+
+
+
+  categories : Category[] = [
+  {
+    "id": 1,
+    "name": "Salads"
+  },
+  {
+    "id": 2,
+    "name": "Soups"
+  },
+  {
+    "id": 3,
+    "name": "Chicken-Dishes"
+  },
+  {
+    "id": 4,
+    "name": "Beef-Dishes"
+  },
+  {
+    "id": 5,
+    "name": "Seafood-Dishes"
+  },
+  {
+    "id": 6,
+    "name": "Vegetable-Dishes"
+  },
+  {
+    "id": 7,
+    "name": "Bits&Bites"
+  },
+  {
+    "id": 8,
+    "name": "On-The-Side"
+  }
+]
+
+
+
 }

@@ -4,15 +4,14 @@ import { Footer } from './footer/footer';
 import { Header } from './header/header';
 import { Home } from './home/home';
 import { Restaurant } from './restaurant/restaurant';
-
-
+import { Todo } from './todo/todo';
 
 
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Footer, Header, Home, Restaurant],
+  imports: [RouterOutlet, Footer, Header, Home, Restaurant, Todo],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

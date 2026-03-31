@@ -2,6 +2,14 @@
 
 
 <!-- two way binding  [()] -->
+ <button (click)="sort()">{{asc}}</button>
+
+<div class="btns">
+  <button (click)="showAll()">All</button>
+   @for (item of categories; track $index) {
+      <button (click)="filterByCat(item.id)">{{item.name}}</button>
+   }
+</div>
 
 <input type="" [(ngModel)]="rame" (ngModelChange)="filter()" >
 <h1>{{rame}}</h1>

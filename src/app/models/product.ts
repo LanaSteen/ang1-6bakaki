@@ -4,7 +4,7 @@
 export class Product {
    id! : number;
    name! : string;
-   price? : number;
+   price! : number;
    nuts? : boolean;
    image? : string;
    vegeterian? : boolean;
@@ -20,6 +20,15 @@ enum  spicinessEnum {
    veryhot = 4
 }
 
+enum cat {
+    salad = "Salads"
+}
+
+
+export class Category {
+    id!: number;
+    name!: string
+}
 
 
 
