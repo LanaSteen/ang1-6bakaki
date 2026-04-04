@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,21 @@ import { Component } from '@angular/core';
 })
 export class Home {
 
+  constructor(private router : ActivatedRoute ){}
+
+  ngOnInit(){
+    // this.router.queryParams.subscribe((data:any) => console.log(data.id))
+        this.router.queryParams.subscribe(data => {
+          console.log(data['id'])
+          this.selecctedId =data['id']
+        })
+  }
 
 
+  selecctedId = 0
+
+  // observable subscribe 
+  // promise  then   
   // let const function
 
   num =0

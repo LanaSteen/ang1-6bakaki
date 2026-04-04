@@ -1,1 +1,14 @@
-<p>header works!</p>
+<nav>
+  <ul>
+    <li><a routerLink="/home" routerLinkActive="act">Home</a></li>
+    <li><a routerLink="/restaurant" routerLinkActive="act">Restaurant</a></li>
+    <li><a routerLink="/todo" routerLinkActive="act">Todo</a></li>
+    <button routerLink="/todo" [queryParams]="{'id':'iij'}">rame</button>
+
+    <button (click)="logIn()">Log In</button>
+  </ul>
+</nav>
+
+
+
+<!-- <p>{{id}}</p> -->
