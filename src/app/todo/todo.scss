@@ -3,3 +3,102 @@
 .comp{
   text-decoration:  line-through;
 }
+
+:host {
+  display: block;
+  max-width: 500px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  color: #ff7a00;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  border: 2px solid #ffb266;
+  border-radius: 8px;
+  outline: none;
+  margin-right: 10px;
+  transition: 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #ff7a00;
+  box-shadow: 0 0 5px rgba(255, 122, 0, 0.5);
+}
+
+/* Range */
+input[type="range"] {
+  width: 100%;
+  margin: 15px 0;
+  accent-color: #ff7a00;
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(135deg, #ff7a00, #ff9f40);
+  border: none;
+  padding: 8px 14px;
+  margin: 5px 5px 10px 0;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Task item */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff3e6;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(255, 122, 0, 0.15);
+  transition: 0.2s;
+}
+
+li:hover {
+  transform: translateY(-2px);
+}
+
+/* Text */
+span {
+  margin-right: 10px;
+}
+
+/* Completed */
+.comp {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Stars */
+li span:nth-child(2) {
+  color: #ff9500;
+  font-size: 18px;
+}

@@ -3,14 +3,17 @@
 
 
 <input type="text" [(ngModel)]="newTask">
-<button (click)="addTask()">Add Task</button>
-<input type="range" >
-
+<button (click)="addTask()">{{addText}}</button>
+<input type="range" min="0" max="5" [(ngModel)]="priority">
+<button (click)="sort()">{{sortBtnText}} </button>
 
 <ul>
    @for (item of tastArr; track $index) {
      <li>
         <span [className]="item.isCompleted ? 'comp' : ''" >{{item.title}}</span>
+        <span>{{'⭐'.repeat(item.priority)}}</span>
+
+        <button [disabled]="edditMode" (click)="edit(item, $index)">✎</button>
         <button (click)="compTask(item)">{{item.isCompleted? 'Undo' : 'Complete'}}</button>
         <button  (click)="deleteTask($index)">Delete</button>
     </li>
