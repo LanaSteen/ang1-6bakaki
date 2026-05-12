@@ -5,13 +5,14 @@ import { Header } from './header/header';
 import { Home } from './home/home';
 import { Restaurant } from './restaurant/restaurant';
 import { Todo } from './todo/todo';
+import { Parent } from './parent/parent';
 
 
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Footer, Header, Home, Restaurant, Todo],
+  imports: [RouterOutlet, Footer, Header, Home, Restaurant, Todo, Parent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

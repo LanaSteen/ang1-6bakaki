@@ -1,0 +1,8 @@
+<p>parent works!</p>
+
+
+<app-child [btnText]="'rame'"   (sendInfoFromChild)="getInfo($event)"></app-child>
+<app-child [btnText]="'ok'"></app-child>
+<app-child [btnText]="textBtn"></app-child>
+<app-child [btnText]="userAuth ? 'Log  Out' : 'Log In'"></app-child>
+

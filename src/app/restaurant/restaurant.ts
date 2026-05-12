@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {  Category, Product } from '../models/product';
 import { FormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-restaurant',
@@ -9,6 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './restaurant.scss',
 })
 export class Restaurant {
+
   rame: string ="";
  asc = "Asc"
 
@@ -356,3 +358,28 @@ filter(){
 
 
 }
+
+
+
+// s p a  
+// routing     -  router-outlet
+// query params 
+
+// {{}}
+
+// [] ფროფერთი ბაინდინგი
+
+
+// ()  ივენთ ბაინდინგი
+
+// [(ngModel)] two way binding     FormsModule
+
+
+// srp  single responsibility principle
+
+
+
+// fetch promise  .then
+
+// http client  observable .subscribe 
+

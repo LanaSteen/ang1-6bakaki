@@ -1,0 +1,17 @@
+<p>child works!</p>
+
+<button (click)="sendinforToParent()">{{ btnText }}</button>
+
+<h1>{{ text | lowercase }}</h1>
+
+<h2>{{ date  | date : 'fullDate'}}</h2>
+<h2>{{ date  | date : 'shortDate'}}</h2>
+
+<h2>{{amount | currency}}</h2>
+<h2>{{amount | currency:"EUR"}}</h2>
+<h2>{{amount | currency:"GBP"}}</h2>
+<h2>{{amount | currency:"GEL"}}</h2>
+<h2>{{amount | currency:"₾"}}</h2>
+
+
+<h3>{{convert('    text ' )}}</h3>
